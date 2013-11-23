@@ -1,4 +1,5 @@
 /*
+/*
  * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -2174,6 +2175,29 @@ class at_icc_start_frostwing_gauntlet : public AreaTriggerScript
         }
 };
 
+enum spell
+{
+ SPELL_Empowering_Blood_Orb     = 70227,
+};
+
+
+#include "Spell.h"
+
+class Empowering_Blood_Orb : public GameObjectScript 
+{ 
+public: 
+Empowering_Blood_Orb() : GameObjectScript("Empowering_Blood_Orb") { } 
+
+bool OnGossipHello(Player* player, GameObject* /*go*/) 
+             { 
+               if (!player->HasActiveSpell(SPELL_Empowering_Blood_Orb)) 
+                player->AddAura(SPELL_Empowering_Blood_Orb, player); 
+
+                    return false; 
+             } 
+};
+
+
 class npc_sindragosas_ward : public CreatureScript
 {
     public:
@@ -2412,4 +2436,5 @@ void AddSC_icecrown_citadel()
     new at_icc_start_frostwing_gauntlet();
     new npc_sindragosas_ward();
     new at_icc_start_sindragosa_gauntlet();
+	new Empowering_Blood_Orb();
 }
