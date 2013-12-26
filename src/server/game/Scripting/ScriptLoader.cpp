@@ -1313,7 +1313,6 @@ void AddBattlegroundScripts()
 
 #ifdef SCRIPTS
 /* This is where custom scripts' loading functions should be declared. */
-void AddSC_Boss_Anouncer();
 void AddSC_Duel_Reset();
 void AddSC_TeLe_gossip_codebox();
 void AddSC_CPWS_Transmogrification();
@@ -1323,7 +1322,6 @@ void AddCustomScripts()
 {
 #ifdef SCRIPTS
     /* This is where custom scripts should be added. */
-	AddSC_Boss_Anouncer();
 	AddSC_Duel_Reset();
 	AddSC_TeLe_gossip_codebox();
     AddSC_CPWS_Transmogrification();

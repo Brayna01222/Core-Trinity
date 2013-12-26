@@ -10,7 +10,6 @@
 
 set(scripts_STAT_SRCS
   ${scripts_STAT_SRCS}
-    Custom/Boss_Anouncer.cpp
     Custom/Duel_Reset.cpp
 	Custom/TeLe_gossip_codebox.cpp
 	Custom/Transmogrification.h
